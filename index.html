@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InfoFinder</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>InfoFinder</h1>
+<p>Search and go to legal sources</p>
+
+<input type="text" id="search" placeholder="Search anything...">
+<br><br>
+
+<button onclick="searchGoogle()">Search Web</button>
+<button onclick="searchBooks()">Search Books</button>
+
+<script>
+function searchGoogle() {
+  let q = document.getElementById("search").value;
+  window.open("https://www.google.com/search?q=" + q, "_blank");
+}
+
+function searchBooks() {
+  let q = document.getElementById("search").value;
+  window.open("https://books.google.com/books?q=" + q, "_blank");
+}
+</script>
+
+</body>
+</html>
